@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>294535765390-99mc1s09elrh4igk5t1d4g10bab59qv7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.294535765390-99mc1s09elrh4igk5t1d4g10bab59qv7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyClMF7ihKQT5I5srO8svDyg93ttdDhbX44</string>
+	<key>GCM_SENDER_ID</key>
+	<string>294535765390</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.biletuygulama</string>
+	<key>PROJECT_ID</key>
+	<string>ticked-4168d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ticked-4168d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:294535765390:ios:7a0901431a5691405718df</string>
+	<key>DATABASE_URL</key>
+	<string>https://ticked-4168d-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>
