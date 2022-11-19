@@ -9,7 +9,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white12,
+      backgroundColor: Colors.white24,
       body: ListView(
         padding: EdgeInsets.all(8.0),
         children: <Widget>[
