@@ -177,7 +177,7 @@ class _LoginFormState extends State<LoginForm> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(24.0)))),
               child: Text(
-                'Giriş Yap',
+                'Giriş Yapınız',
                 style: TextStyle(fontSize: 26,color: Colors.black),
               ),
             ),
