@@ -44,7 +44,8 @@ dependencies:
   rolling_bottom_bar: ^0.2.2
   simple_animations: ^2.2.1
   url_launcher: ^6.1.6
-
+  firebase_database: ^10.0.7
+  cloud_firestore: ^4.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

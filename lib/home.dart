@@ -1,6 +1,8 @@
 
 import 'package:biletuygulama/nav/homepage.dart';
 import 'package:biletuygulama/nav/profile.dart';
+import 'package:biletuygulama/nav/tickets.dart';
+import 'package:biletuygulama/nav/todo.dart';
 import 'package:flutter/material.dart';
 import 'package:rolling_bottom_bar/rolling_bottom_bar.dart';
 import 'package:rolling_bottom_bar/rolling_bottom_bar_item.dart';
@@ -30,7 +32,7 @@ class _NavState extends State<Nav> {
       body: PageView(
         controller: _controller,
         children: <Widget>[
-          ProfilePage(),
+          Home(),
           HomePage(),
           ProfilePage(),
         ],

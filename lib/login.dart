@@ -44,10 +44,9 @@ class Login extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,color: Colors.white)),SizedBox(width: 15,),
               GestureDetector(
                 onTap: () {
-                  // Navigator.pushNamed(context, '/signup');
-                  Navigator.push(context,
+                  Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) => Signup()));
-                },
+                  },
                 child: Text('Kayıt ol !!',
                     style: TextStyle(fontSize: 20, color: Colors.amber)),
               )
@@ -177,7 +176,7 @@ class _LoginFormState extends State<LoginForm> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(24.0)))),
               child: Text(
-                'Giriş Yapınız',
+                'Giriş Yap',
                 style: TextStyle(fontSize: 26,color: Colors.black),
               ),
             ),

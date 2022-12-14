@@ -1,5 +1,6 @@
 
 
+import 'package:biletuygulama/login.dart';
 import 'package:flutter/material.dart';
 
 import 'authentication.dart';
@@ -230,7 +231,7 @@ class _SignupFormState extends State<SignupForm> {
                       .then((result) {
                     if (result == null) {
                       Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (context) => Nav()));
+                          MaterialPageRoute(builder: (context) => Login()));
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         content: Text(
