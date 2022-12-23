@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
   final _fireStore = FirebaseFirestore.instance;
   final _auth = FirebaseAuth.instance;
   late User loggedInUser;
-
+var uid = FirebaseAuth.instance.currentUser?.uid.toString();
   /// form variable
   late String tarih;
   late String film;
@@ -62,38 +62,34 @@ class _HomeState extends State<Home> {
     _auth.signOut();
     Navigator.pop(context);
   }
+  var kullanici = FirebaseAuth.instance.currentUser?.uid.toString();
+  var bakiye =FirebaseFirestore.instance
+      .collection("Müsteri")
+      .doc("kullanici")
+      .get();
+
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
 
-          actions: <Widget>[
-            IconButton(
-                icon: Icon(Icons.close),
-                onPressed: () {
-                  // _auth.signOut();
-                  // Navigator.pop(context);
-                  logout();
-                  //   getMessages();
-                  //Implement logout functionality
-                }),
-          ],
-        ),
+
+    return Scaffold(backgroundColor: Colors.grey,
+
         body: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  'etkinlik ekle',
+                  '$bakiye  ',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 40,
-                    color: Colors.blue,
+                    color: Colors.amber,
                   ),
                 ),
               ),
@@ -162,21 +158,27 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
+              SizedBox(height:20),
+              Text("** Rezervasyon için 100 kredi kullanılacaktır  **",style: TextStyle(color:Colors.white ),textAlign: TextAlign.center),
+
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 16.0),
+
                 child: Material(
                   // elevation: 5.0,
-                  color: Colors.lightBlueAccent,
+                  color: Colors.amber,
                   borderRadius: BorderRadius.circular(30.0),
                   child: MaterialButton(
                     minWidth: 200.0,
                     height: 42.0,
                     child: Text(
                       'Kaydet',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black),
                     ),
+
                     onPressed: () async {
-                      _fireStore.collection('Müsteri').add({
+
+                    _fireStore.collection('Müsteri').add({
                         'tarih': tarih,
                         'film': film,
                         'salonno': salonno,
@@ -196,14 +198,14 @@ class _HomeState extends State<Home> {
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 child: Material(
                   elevation: 5.0,
-                  color: Colors.lightBlueAccent,
+                  color: Colors.amber,
                   borderRadius: BorderRadius.circular(30.0),
                   child: MaterialButton(
                     minWidth: 200.0,
                     height: 42.0,
                     child: Text(
-                      'Todo_List',
-                      style: TextStyle(color: Colors.white),
+                      'Rezervasyonlarım',
+                      style: TextStyle(color: Colors.black),
                     ),
                     onPressed: () async {
                       Navigator.push(

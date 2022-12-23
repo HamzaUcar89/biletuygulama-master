@@ -1,12 +1,22 @@
 
 
 import 'package:biletuygulama/login.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'authentication.dart';
 import 'home.dart';
 
-class Signup extends StatelessWidget {
+class Signup extends StatefulWidget {
+
+  @override
+  State<Signup> createState() => _SignupState();
+}
+
+class _SignupState extends State<Signup> {
+  final _fireStore = FirebaseFirestore.instance;
+  final _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white12,

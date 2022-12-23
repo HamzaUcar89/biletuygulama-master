@@ -59,6 +59,8 @@ class _TodoListState extends State<TodoList> {
               final todoLists = snapshot.data!.docs;
 
               for (var todoList in todoLists) {
+                final bakiye = (todoList.data() as dynamic)['bakiye'];
+
                 final tarih= (todoList.data() as dynamic)['tarih'];
                 final salonno = (todoList.data() as dynamic)['salonno'];
 
@@ -68,10 +70,12 @@ class _TodoListState extends State<TodoList> {
 
                 final loggedIn = (todoList.data() as dynamic)['biletSahibi'];
 
+
                 final currentUser = loggedInUser.email;
 
 
                 final messageWidget = MessageBubble(
+                  bakiye:'$bakiye',
                   tarih: '$tarih',
                   isLoggedIn: currentUser == loggedIn,
                   salonno: '$salonno',
@@ -98,16 +102,22 @@ class _TodoListState extends State<TodoList> {
 
 class MessageBubble extends StatelessWidget {
   MessageBubble(
-      {required this.isLoggedIn,
+
+      {
+        required this.bakiye,
+
+        required this.isLoggedIn,
         required this.tarih,
         required this.film,
         required this.seans,
-        required this.salonno});
+        required this.salonno
+      });
   final String tarih;
   final String film;
   final String seans;
   final String salonno;
   final bool isLoggedIn;
+   var bakiye;
 
   @override
   Widget build(BuildContext context) {
@@ -116,6 +126,7 @@ class MessageBubble extends StatelessWidget {
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.center,
         children: [
+
           Row(
             children: [
               Text('$film',
