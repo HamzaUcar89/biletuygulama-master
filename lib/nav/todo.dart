@@ -1,180 +1,65 @@
+
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class TodoList extends StatefulWidget {
-  TodoList({Key? key}) : super(key: key);
+class Deger extends StatefulWidget {
+  const Deger({super.key});
 
   @override
-  _TodoListState createState() => _TodoListState();
+  State<Deger> createState() => _DegerState();
 }
-
-class _TodoListState extends State<TodoList> {
-  final _fireStore = FirebaseFirestore.instance;
-  final _auth = FirebaseAuth.instance;
-
-  late User loggedInUser;
-
-  @override
-  void initState() {
-    super.initState();
-    getCurrentUser();
-  }
-
-  void getCurrentUser() async {
-    try {
-      final user = _auth.currentUser;
-      if (user != null) {
-        loggedInUser = user;
-        print(loggedInUser.email);
-      }
-    } catch (e) {
-      print(e);
-    }
-  }
-
+final _firestore = FirebaseFirestore.instance;
+class _DegerState extends State<Deger> {
+  var uid = FirebaseAuth.instance.currentUser?.uid.toString();
   @override
   Widget build(BuildContext context) {
+    CollectionReference veriRef =_firestore.collection('Rezervasyon');
+    var uidRef = veriRef.doc('$uid');
+    
     return Scaffold(
-
       body: Column(
-        children: [
-          StreamBuilder<QuerySnapshot>(
-            ///
-            stream: _fireStore
-                .collection('Müsteri')
-                .orderBy('olusturmazamani', descending: false)
-                .snapshots(),
+        children:<Widget> [
+        
+        StreamBuilder<DocumentSnapshot>(stream:uidRef.snapshots() ,
+        builder: (BuildContext context, AsyncSnapshot asyncSnapshot) {
+          if (!asyncSnapshot.hasData) {
+                        return const Center(
+                          child: Text("Loading..."),
+                        );
+                      }
+                      return Container(width: 400,
+                        child: Card(child:Column(children:<Widget> [
+                          Image.asset("assets/images/otobüs.png",width: 250,height: 300,),
+                          SizedBox(height: 25,),
+                                    Text("Rezervasyon Bilgileriniz",style: TextStyle(fontSize: 26),),
+SizedBox(height: 50,),
+                          Text("${asyncSnapshot.data.data().toString()}",style: TextStyle(fontSize: 24),),
+                          SizedBox(height: 50,),
 
-
-            builder: (context, snapshot) {
-              List<MessageBubble> todoWidgets = [];
-              if (!snapshot.hasData) {
-                return Center(
-                  child: CircularProgressIndicator(
-                    backgroundColor: Colors.lightBlueAccent,
-                  ),
-                );
-              }
-              final todoLists = snapshot.data!.docs;
-
-              for (var todoList in todoLists) {
-                final bakiye = (todoList.data() as dynamic)['bakiye'];
-
-                final tarih= (todoList.data() as dynamic)['tarih'];
-                final salonno = (todoList.data() as dynamic)['salonno'];
-
-                final film = (todoList.data() as dynamic)['film'];
-
-                final seans = (todoList.data() as dynamic)['seans'];
-
-                final loggedIn = (todoList.data() as dynamic)['biletSahibi'];
-
-
-                final currentUser = loggedInUser.email;
-
-
-                final messageWidget = MessageBubble(
-                  bakiye:'$bakiye',
-                  tarih: '$tarih',
-                  isLoggedIn: currentUser == loggedIn,
-                  salonno: '$salonno',
-                  film: '$film',
-                  seans: '$seans',
-                );
-
-                todoWidgets.add(messageWidget);
-              }
-
-              return Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ListView(children: todoWidgets),
-                ),
-              );
-            },
-          ),
+                          ElevatedButton(onPressed:(){
+                            var collection = FirebaseFirestore.instance.collection('Rezervasyon');
+collection 
+    .doc(uid)
+    .delete();
+                          } ,child: Text("Rezervasyonu Sil"),
+                          style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.purpleAccent),
+               
+                textStyle:
+                    MaterialStateProperty.all(const TextStyle(fontSize: 30))),
+            
+                          )
+                        ],
+                        
+                         
+                        )),
+                      );
+         } ,
+        ),
         ],
       ),
     );
-  }
-}
-
-class MessageBubble extends StatelessWidget {
-  MessageBubble(
-
-      {
-        required this.bakiye,
-
-        required this.isLoggedIn,
-        required this.tarih,
-        required this.film,
-        required this.seans,
-        required this.salonno
-      });
-  final String tarih;
-  final String film;
-  final String seans;
-  final String salonno;
-  final bool isLoggedIn;
-   var bakiye;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(10.0),
-      child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-
-          Row(
-            children: [
-              Text('$film',
-                  textAlign: TextAlign.left,
-                  style: TextStyle(fontSize: 30.0, color: Colors.black)),
-            ],
-          ),
-          Material(
-              elevation: 5.0,
-              borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(30.0),
-                  bottomRight: Radius.circular(30.0),
-                  bottomLeft: Radius.circular(30.0)),
-              color: Colors.lightBlueAccent,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text('$tarih',
-                          style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.black,
-                          )),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text('$salonno',
-                          style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.black,
-                          )),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text('$tarih',
-                          style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.black,
-                          )),
-                    ),
-                  ],
-                ),
-              )),
-        ],
-      ),
-    );
-  }
+  }  
 }

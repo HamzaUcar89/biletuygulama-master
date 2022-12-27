@@ -19,7 +19,7 @@ class _SignupState extends State<Signup> {
   final _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: Colors.white12,
+    return Scaffold(backgroundColor: Colors.purpleAccent,
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: <Widget>[
@@ -27,7 +27,7 @@ class _SignupState extends State<Signup> {
           // logo
           Column(
             children: [
-              Image.asset("assets/images/sinema.png",height: 200,width: 250,),
+              Image.asset("assets/images/otobüs.png",height: 200,width: 250,),
             ],
           ),
           SizedBox(height: 30),
@@ -52,7 +52,7 @@ class _SignupState extends State<Signup> {
                         Navigator.pop(context);
                       },
                       child: Text(' Giriş Yap',
-                          style: TextStyle(fontSize: 20, color: Colors.amber)),
+                          style: TextStyle(fontSize: 20, color: Colors.black)),
                     )
                   ],
                 )
@@ -120,7 +120,7 @@ class _SignupFormState extends State<SignupForm> {
 
                 labelText: 'E-posta',
                 labelStyle: TextStyle(color: Colors.white),
-                prefixIcon: Icon(Icons.email_outlined,color: Colors.amber,),
+                prefixIcon: Icon(Icons.email_outlined,color: Colors.black,),
                 border: border),
             validator: (value) {
               if (value!.isEmpty) {
@@ -143,7 +143,7 @@ class _SignupFormState extends State<SignupForm> {
               labelText: 'Şifre',
 
               labelStyle: TextStyle(color: Colors.white),
-              prefixIcon: Icon(Icons.lock_outlined,color: Colors.amber,),
+              prefixIcon: Icon(Icons.lock_outlined,color: Colors.black,),
               border: border,
               suffixIcon: GestureDetector(
                 onTap: () {
@@ -174,7 +174,7 @@ class _SignupFormState extends State<SignupForm> {
             decoration: InputDecoration(
               labelText: 'Şifre(Tekrar)',
               labelStyle: TextStyle(color: Colors.white),
-              prefixIcon: Icon(Icons.lock_outlined,color: Colors.amber,),
+              prefixIcon: Icon(Icons.lock_outlined,color: Colors.black,),
               border: border,
             ),
             obscureText: true,
@@ -191,7 +191,7 @@ class _SignupFormState extends State<SignupForm> {
           TextFormField(
             decoration: InputDecoration(
               labelStyle: TextStyle(color: Colors.white),
-              prefixIcon: Icon(Icons.account_circle,color: Colors.amber,),
+              prefixIcon: Icon(Icons.account_circle,color: Colors.black,),
               labelText: 'İsim - Soyisim',
 
               border: border,
@@ -253,7 +253,7 @@ class _SignupFormState extends State<SignupForm> {
                   });
                 }
               },
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.amber,
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(24.0)))),
               child: Text('Kayıt Ol',style: TextStyle(color: Colors.black,fontSize:22),),
