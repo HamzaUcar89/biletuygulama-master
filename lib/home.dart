@@ -33,7 +33,7 @@ class _NavState extends State<Nav> {
         children: <Widget>[
           Deger(),
           HomePage(),
-          ProfilePage(),
+          Profile(),
         ],
       ),
       extendBody: true,

@@ -480,7 +480,7 @@ String a = "merhaba";
                  children: <Widget>[
                    ListTile(
                      leading:Image.asset("assets/images/huzur.jpg",width: 80,height: 150,),
-                     title: Text('Ulusoy Turizm',style: TextStyle(fontSize: 18)),
+                     title: Text('Huzur Turizm',style: TextStyle(fontSize: 18)),
                      subtitle: Text('Elazığ Otogarı - Ankara Otogarı',style: TextStyle(fontSize: 16)),
     
                    ),
@@ -627,7 +627,7 @@ if(dropdownvalue=="Elazığ"&&dropdownvalue2=="İstanbul")...[
                  children: <Widget>[
                    ListTile(
                      leading:Image.asset("assets/images/huzur.jpg",width: 80,height: 150,),
-                     title: Text('Ulusoy Turizm',style: TextStyle(fontSize: 18)),
+                     title: Text('Huzur Turizm',style: TextStyle(fontSize: 18)),
                      subtitle: Text('Konya Otogarı - İstanbul Otogarı',style: TextStyle(fontSize: 16)),
     
                    ),
@@ -677,7 +677,7 @@ if(dropdownvalue=="Elazığ"&&dropdownvalue2=="İstanbul")...[
                  children: <Widget>[
                    ListTile(
                      leading:Image.asset("assets/images/huzur.jpg",width: 80,height: 150,),
-                     title: Text('Ulusoy Turizm',style: TextStyle(fontSize: 18)),
+                     title: Text('Huzur Turizm',style: TextStyle(fontSize: 18)),
                      subtitle: Text('Konya Otogarı - Elazığ Otogarı',style: TextStyle(fontSize: 16)),
     
                    ),
@@ -778,7 +778,7 @@ if(dropdownvalue=="Elazığ"&&dropdownvalue2=="İstanbul")...[
                  children: <Widget>[
                    ListTile(
                      leading:Image.asset("assets/images/pamukkale.jpg",width: 80,height: 150,),
-                     title: Text('Ulusoy Turizm',style: TextStyle(fontSize: 18)),
+                     title: Text('Pamukkale Turizm',style: TextStyle(fontSize: 18)),
                      subtitle: Text('İstanbul Otogarı - Konya Otogarı',style: TextStyle(fontSize: 16)),
     
                    ),
@@ -928,7 +928,7 @@ if(dropdownvalue=="Elazığ"&&dropdownvalue2=="İstanbul")...[
                  children: <Widget>[
                    ListTile(
                      leading:Image.asset("assets/images/kamilkoc.png",width: 80,height: 150,),
-                     title: Text('Ulusoy Turizm',style: TextStyle(fontSize: 18)),
+                     title: Text('Kamil Koç Turizm',style: TextStyle(fontSize: 18)),
                      subtitle: Text('İstanbul Otogarı - Elazığ Otogarı',style: TextStyle(fontSize: 16)),
     
                    ),
@@ -978,7 +978,7 @@ if(dropdownvalue=="Elazığ"&&dropdownvalue2=="İstanbul")...[
                  children: <Widget>[
                    ListTile(
                      leading:Image.asset("assets/images/pamukkale.jpg",width: 80,height: 150,),
-                     title: Text('Ulusoy Turizm',style: TextStyle(fontSize: 18)),
+                     title: Text('Pamukkale Turizm',style: TextStyle(fontSize: 18)),
                      subtitle: Text('İstanbul Otogarı - Ankara Otogarı',style: TextStyle(fontSize: 16)),
     
                    ),
