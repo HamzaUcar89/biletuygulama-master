@@ -50,20 +50,22 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCsdKTfVU2FlExMzrI-aCMMD5OHflnUB3Q',
-    appId: '1:695176998694:android:a60ebd76bc685dde8f1be7',
-    messagingSenderId: '695176998694',
-    projectId: 'biletuygulamasi',
-    storageBucket: 'biletuygulamasi.appspot.com',
+    apiKey: 'AIzaSyCj4Q4JlnQOuUV4orMbcfrqcbsnxUxPXNI',
+    appId: '1:294535765390:android:161cf8661430603f5718df',
+    messagingSenderId: '294535765390',
+    projectId: 'ticked-4168d',
+    databaseURL: 'https://ticked-4168d-default-rtdb.europe-west1.firebasedatabase.app',
+    storageBucket: 'ticked-4168d.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBpyjQtTNvIvlIMbXHx-0elLkQUZDcGTGg',
-    appId: '1:695176998694:ios:2fca96df889c322a8f1be7',
-    messagingSenderId: '695176998694',
-    projectId: 'biletuygulamasi',
-    storageBucket: 'biletuygulamasi.appspot.com',
-    iosClientId: '695176998694-otcnbf1a0ddtlh4k54aj12esbuvs7h8n.apps.googleusercontent.com',
+    apiKey: 'AIzaSyClMF7ihKQT5I5srO8svDyg93ttdDhbX44',
+    appId: '1:294535765390:ios:7a0901431a5691405718df',
+    messagingSenderId: '294535765390',
+    projectId: 'ticked-4168d',
+    databaseURL: 'https://ticked-4168d-default-rtdb.europe-west1.firebasedatabase.app',
+    storageBucket: 'ticked-4168d.appspot.com',
+    iosClientId: '294535765390-99mc1s09elrh4igk5t1d4g10bab59qv7.apps.googleusercontent.com',
     iosBundleId: 'com.example.biletuygulama',
   );
 }

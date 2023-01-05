@@ -63,7 +63,7 @@ String a = "merhaba";
               
               Column(
                 children: [
-                  Text("Nereden",style: TextStyle(fontSize: 20),),
+                  Text("Kalkış Noktası",style: TextStyle(fontSize: 20),),
     SizedBox(height: 20,),
     
                   DropdownButton(
@@ -118,11 +118,11 @@ String a = "merhaba";
       
       
       
-              SizedBox(width:100),
+              SizedBox(width:60),
       
               Column(
                 children: [
-                  Text("Nereye",style: TextStyle(fontSize: 20),),
+                  Text("Varış Noktası",style: TextStyle(fontSize: 20),),
     SizedBox(height: 20,),
                   DropdownButton(
       

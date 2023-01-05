@@ -1,40 +1,41 @@
 {
   "project_info": {
-    "project_number": "695176998694",
-    "project_id": "biletuygulamasi",
-    "storage_bucket": "biletuygulamasi.appspot.com"
+    "project_number": "294535765390",
+    "firebase_url": "https://ticked-4168d-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "ticked-4168d",
+    "storage_bucket": "ticked-4168d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:695176998694:android:a60ebd76bc685dde8f1be7",
+        "mobilesdk_app_id": "1:294535765390:android:161cf8661430603f5718df",
         "android_client_info": {
           "package_name": "com.example.biletuygulama"
         }
       },
       "oauth_client": [
         {
-          "client_id": "695176998694-ssmic9g2p9qrkr9ea3e35ucireko4d9r.apps.googleusercontent.com",
+          "client_id": "294535765390-cu7sm8f0er6u3psgdpap45d0nd81pb6f.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCsdKTfVU2FlExMzrI-aCMMD5OHflnUB3Q"
+          "current_key": "AIzaSyCj4Q4JlnQOuUV4orMbcfrqcbsnxUxPXNI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "695176998694-ssmic9g2p9qrkr9ea3e35ucireko4d9r.apps.googleusercontent.com",
+              "client_id": "294535765390-cu7sm8f0er6u3psgdpap45d0nd81pb6f.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "695176998694-73hu2jmpn68ojqjcnufk5gsn5tsfvm4k.apps.googleusercontent.com",
+              "client_id": "294535765390-77tif7jn1cck6d75vtbqkqlvbt4j5609.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.busTicketUnap"
+                "bundle_id": "com.example.untitled"
               }
             }
           ]
@@ -43,106 +44,34 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:695176998694:android:19e5d2991ee1eb5a8f1be7",
+        "mobilesdk_app_id": "1:294535765390:android:b7e6f6b6a44b279a5718df",
         "android_client_info": {
-          "package_name": "com.example.bus_ticket"
+          "package_name": "com.example.sinemabiletotomasyon"
         }
       },
       "oauth_client": [
         {
-          "client_id": "695176998694-ssmic9g2p9qrkr9ea3e35ucireko4d9r.apps.googleusercontent.com",
+          "client_id": "294535765390-cu7sm8f0er6u3psgdpap45d0nd81pb6f.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCsdKTfVU2FlExMzrI-aCMMD5OHflnUB3Q"
+          "current_key": "AIzaSyCj4Q4JlnQOuUV4orMbcfrqcbsnxUxPXNI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "695176998694-ssmic9g2p9qrkr9ea3e35ucireko4d9r.apps.googleusercontent.com",
+              "client_id": "294535765390-cu7sm8f0er6u3psgdpap45d0nd81pb6f.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "695176998694-73hu2jmpn68ojqjcnufk5gsn5tsfvm4k.apps.googleusercontent.com",
+              "client_id": "294535765390-77tif7jn1cck6d75vtbqkqlvbt4j5609.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.busTicketUnap"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:695176998694:android:8a4b6bcae6c15eba8f1be7",
-        "android_client_info": {
-          "package_name": "com.example.bus_ticket_unap"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "695176998694-ssmic9g2p9qrkr9ea3e35ucireko4d9r.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCsdKTfVU2FlExMzrI-aCMMD5OHflnUB3Q"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "695176998694-ssmic9g2p9qrkr9ea3e35ucireko4d9r.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "695176998694-73hu2jmpn68ojqjcnufk5gsn5tsfvm4k.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.busTicketUnap"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:695176998694:android:0618b4d55e404e538f1be7",
-        "android_client_info": {
-          "package_name": "com.example.snemabilet"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "695176998694-ssmic9g2p9qrkr9ea3e35ucireko4d9r.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCsdKTfVU2FlExMzrI-aCMMD5OHflnUB3Q"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "695176998694-ssmic9g2p9qrkr9ea3e35ucireko4d9r.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "695176998694-73hu2jmpn68ojqjcnufk5gsn5tsfvm4k.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.busTicketUnap"
+                "bundle_id": "com.example.untitled"
               }
             }
           ]
